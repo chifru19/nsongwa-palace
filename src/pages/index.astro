@@ -1,53 +1,8 @@
 ---
-const images = import.meta.glob('/public/assets/images/*.{jpeg,jpg,png}');
-const imagePaths = Object.keys(images).map(path => path.replace('/public', ''));
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Nsongwa Palace | Traditional Fondom of Cameroon</title>
-    <style>
-      body { font-family: 'Georgia', serif; margin: 0; background-color: #fcfcfc; color: #333; }
-      header { background-color: #8b0000; color: white; padding: 2rem; text-align: center; }
-      .header-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid white; margin-bottom: 1rem; }
-      main { padding: 2rem; max-width: 800px; margin: auto; }
-      #events { background: #eee; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-      .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-      h3 { color: #8b0000; }
-    </style>
-  </head>
+<html>
   <body>
-    <header>
-      <img src="/assets/images/fon-nsongwa.jpg" alt="The Fon of Nsongwa" class="header-img">
-      <h1>Nsongwa Palace</h1>
-      <p>Preserving Heritage, Empowering Community</p>
-    </header>
-    <main>
-      <h2>Welcome to the Fondom</h2>
-      <p>Official website for the Nsongwa Palace and Village.</p>
-
-      <section id="events">
-        <h3>Upcoming Events & Activities</h3>
-        <ul>
-          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
-          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
-        </ul>
-      </section>
-
-      <section id="media">
-        <h3>Gallery</h3>
-        <div class="gallery">
-          {imagePaths.map((src) => (
-            <img src={src} alt="Nsongwa Visual" style="width: 100%; border-radius: 8px; border: 2px solid #8b0000;" />
-          ))}
-        </div>
-        
-        <h3 style="margin-top: 2rem;">Ceremony Video</h3>
-        <video width="100%" controls>
-          <source src="/assets/videos/nsongwa-ceremony.mp4" type="video/mp4">
-        </video>
-      </section>
-    </main>
+    <h1>Nsongwa Palace</h1>
+    <p>Coming Soon</p>
   </body>
 </html>
