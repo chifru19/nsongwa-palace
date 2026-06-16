@@ -1,8 +1,51 @@
 ---
 ---
 <html>
+  <head>
+    <style>
+      body { font-family: sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+      .hero { background-color: #8b0000; color: white; text-align: center; padding: 3rem 1rem; }
+      .content { max-width: 800px; margin: 0 auto; padding: 2rem; }
+      .event-box { background-color: #f4f4f4; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+      .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+      .map-container { margin-top: 2rem; }
+    </style>
+  </head>
   <body>
-    <h1>Nsongwa Palace</h1>
-    <p>Coming Soon</p>
+    <header class="hero">
+      <h1>Nsongwa Palace</h1>
+      <p><em>Preserving Heritage, Empowering Community</em></p>
+    </header>
+
+    <main class="content">
+      <section>
+        <h2>Welcome to the Fondom</h2>
+        <p>Official website for the Nsongwa Palace and Village.</p>
+      </section>
+
+      <section class="event-box">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="/assets/images/fon-nsongwa.jpg" alt="Fon Nsongwa" />
+        </div>
+      </section>
+
+      <section class="map-container">
+        <h2>Our Location</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Nsongwa+Palace" 
+          width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </section>
+    </main>
   </body>
 </html>
