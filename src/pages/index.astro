@@ -3,32 +3,49 @@
 <html>
   <head>
     <style>
-      body { font-family: sans-serif; margin: 0; padding: 0; }
-      .hero { background-color: #8b0000; color: white; text-align: center; padding: 2rem; }
+      body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
+      .hero { background: #8b0000; color: white; text-align: center; padding: 3rem 1rem; }
       .hero img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 4px solid white; }
-      .content { max-width: 800px; margin: 0 auto; padding: 1rem; }
-      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 1rem; }
-      .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+      .content { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 10px; }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 1rem; }
+      .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.2s; }
+      .gallery img:hover { transform: scale(1.05); }
+      .event-box { background: #eee; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; }
     </style>
   </head>
   <body>
-    <div class="hero">
+    <header class="hero">
       <img src="/nsongwa-palace/assets/images/hero.jpg" alt="Fon Nsongwa" />
       <h1>Nsongwa Palace</h1>
-    </div>
-    <div class="content">
+      <p><em>Preserving Heritage, Empowering Community</em></p>
+    </header>
+
+    <main class="content">
+      <section>
+        <h2>Welcome to the Fondom</h2>
+        <p>Official website for the Nsongwa Palace and Village, dedicated to preserving our cultural heritage and fostering community development.</p>
+      </section>
+
+      <section class="event-box">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
       <h2>Gallery</h2>
       <div class="gallery">
-        <img src="/nsongwa-palace/assets/images/gallery-1.jpg" alt="Gallery 1" />
-        <img src="/nsongwa-palace/assets/images/gallery-2.jpg" alt="Gallery 2" />
-        <img src="/nsongwa-palace/assets/images/gallery-3.jpg" alt="Gallery 3" />
-        <img src="/nsongwa-palace/assets/images/gallery-4.jpg" alt="Gallery 4" />
-        <img src="/nsongwa-palace/assets/images/gallery-5.jpg" alt="Gallery 5" />
-        <img src="/nsongwa-palace/assets/images/gallery-6.jpg" alt="Gallery 6" />
-        <img src="/nsongwa-palace/assets/images/gallery-7.jpg" alt="Gallery 7" />
-        <img src="/nsongwa-palace/assets/images/gallery-8.jpg" alt="Gallery 8" />
-        <img src="/nsongwa-palace/assets/images/gallery-9.jpg" alt="Gallery 9" />
+        <img src="/nsongwa-palace/assets/images/gallery-1.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-2.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-3.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-4.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-5.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-6.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-7.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-8.jpg" alt="Gallery" />
+        <img src="/nsongwa-palace/assets/images/gallery-9.jpg" alt="Gallery" />
       </div>
-    </div>
+    </main>
   </body>
 </html>
