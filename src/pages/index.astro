@@ -3,21 +3,32 @@
 <html>
   <head>
     <style>
-      body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
+      body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
       .hero { background: #8b0000; color: white; text-align: center; padding: 3rem 1rem; }
       .content { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 10px; }
       .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 1rem; }
       .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-      .project-box { background: #fff8dc; padding: 1.5rem; border-left: 5px solid #daa520; margin: 2rem 0; }
+      .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+      .project-box { border-left-color: #daa520; background: #fff8dc; }
     </style>
   </head>
   <body>
     <header class="hero">
-      <h1>Nsongwa Palace Construction</h1>
+      <h1>Nsongwa Palace</h1>
     </header>
+
     <main class="content">
-      <section class="project-box">
+      <section class="section-box">
+        <h2>Upcoming Events & Activities</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
+      <section class="section-box project-box">
         <h2>Construction Progress</h2>
+        <p>Expansion and modernization of the palace facilities.</p>
         <div class="gallery">
           {Array.from({ length: 11 }).map((_, i) => (
             <img src={`/nsongwa-palace/assets/images/construction-${i + 1}.jpg`} alt={`Construction ${i + 1}`} />
