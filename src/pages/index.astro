@@ -17,29 +17,31 @@
     <header class="hero">
       <img src="/nsongwa-palace/assets/images/hero.jpg" alt="Fon Nsongwa" />
       <h1>Nsongwa Palace</h1>
-      <p><em>Preserving Heritage, Empowering Community</em></p>
     </header>
 
     <main class="content">
       <section class="section-box">
-        <h2>Welcome to the Fondom</h2>
-        <p>Official website for the Nsongwa Palace and Village.</p>
-      </section>
-
-      <section class="section-box">
-        <h2>Upcoming Events & Activities</h2>
+        <h2>Upcoming Events</h2>
         <ul>
           <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
           <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
         </ul>
       </section>
 
+      <section class="section-box">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          {['1','2','3','4','5','6'].map((num) => (
+            <img src={`/nsongwa-palace/assets/images/gallery-${num}.jpg`} alt={`Gallery ${num}`} />
+          ))}
+        </div>
+      </section>
+
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
-        <p>Expansion and modernization of the palace facilities.</p>
         <div class="gallery">
-          {['1','2','4','5','6','7','8','9'].map((num) => (
-            <img src={`/nsongwa-palace/assets/images/construction-${num}.jpg`} alt={`Construction ${num}`} />
+          {Array.from({ length: 11 }).map((_, i) => (
+            <img src={`/nsongwa-palace/assets/images/construction-${i + 1}.jpg`} alt={`Construction ${i + 1}`} />
           ))}
         </div>
       </section>
