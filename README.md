@@ -41,3 +41,10 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Fon's Silver Jubilee
+
+![Jubilee Celebration 1](/assets/images/jubilee/jubilee-1.jpg)
+![Jubilee Celebration 2](/assets/images/jubilee/jubilee-2.jpg)
+![Jubilee Celebration 3](/assets/images/jubilee/jubilee-3.jpg)
+![Jubilee Celebration 4](/assets/images/jubilee/jubilee-4.jpg)
+![Jubilee Celebration 5](/assets/images/jubilee/jubilee-5.jpg)
