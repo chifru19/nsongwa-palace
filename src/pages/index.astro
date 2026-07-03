@@ -9,3 +9,47 @@ const imagePaths = Object.values(images).map((_, path) => path);
     <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery Image" style="width: 100%; height: auto; border-radius: 8px;" />
   ))}
 </div>
+<<<<<<< HEAD
+=======
+
+<div class="gallery-container" style="padding: 20px;">
+  <hr />
+  <h3>Jubilee Collection</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png}', {eager: true, import: 'default'}).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
+
+  <h3>Construction Progress</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}', {eager: true, import: 'default'}).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
+
+  <h3>General Gallery</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg,png}', {eager: true, import: 'default'}).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
+</div>
+
+<div class="gallery-container" style="padding: 20px;">
+  <hr />
+  <h3>Jubilee Collection</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {Object.keys(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png}')).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
+
+  <h3>Construction Progress</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}')).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
+</div>
+>>>>>>> 96ecd3e (restore original layout and append gallery)
