@@ -11,6 +11,7 @@
       .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
       .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
       .project-box { border-left-color: #daa520; background: #fff8dc; }
+      .donation-box { border-left-color: #28a745; background: #e8f5e9; text-align: center; }
       .video-container { margin-top: 1rem; }
       .video-container video { width: 100%; border-radius: 8px; }
       footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
@@ -28,6 +29,20 @@
         <h2>Location</h2>
         <p><strong>Nsongwa Palace</strong><br> W426+QW, Bamenda, Cameroon</p>
         <p><a href="https://www.google.com/maps/search/?api=1&query=W426+QW+Bamenda+Cameroon" target="_blank">View on Google Maps</a></p>
+      </section>
+
+      <section class="section-box">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
+      <section class="section-box donation-box">
+        <h2>Support the Palace</h2>
+        <p>Your contributions help preserve our cultural heritage.</p>
+        <p><strong>Mobile Money (MoMo):</strong> 670 429 883 (Nsongwa Palace)</p>
       </section>
 
       <section class="section-box">
@@ -56,19 +71,10 @@
           ))}
         </div>
       </section>
-
-      <section class="section-box">
-        <h2>General Gallery</h2>
-        <div class="gallery">
-          {Object.keys(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg}', {eager: true})).map(path => (
-            <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" />
-          ))}
-        </div>
-      </section>
     </main>
 
     <footer>
-      <p><strong>Frank Fru</strong> | Engineer & Son of the Land</p>
+      <p><strong>Chi Fru</strong> | Engineer & Son of the Land</p>
       <p><a href="https://frankfru.com">Portfolio</a> | <a href="https://github.com/chifru19">GitHub</a> | <a href="https://www.linkedin.com/in/frank-fru">LinkedIn</a></p>
       <p>Contact: <a href="mailto:chifru19@googlemail.com">chifru19@googlemail.com</a></p>
     </footer>
