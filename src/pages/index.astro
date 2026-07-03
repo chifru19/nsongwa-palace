@@ -31,9 +31,9 @@
       </section>
 
       <section class="section-box">
-        <h2>Nsongwa Ceremony</h2>
+        <h2>Nsongwa Ceremony Video</h2>
         <div class="video-container">
-          <video controls width="100%">
+          <video controls>
             <source src="/nsongwa-palace/assets/videos/nsongwa-ceremony.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -43,7 +43,7 @@
       <section class="section-box">
         <h2>Jubilee Collection</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(path => (
+          {Object.entries(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" />
           ))}
         </div>
@@ -52,7 +52,7 @@
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(path => (
+          {Object.entries(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" />
           ))}
         </div>
@@ -61,7 +61,7 @@
       <section class="section-box">
         <h2>General Gallery</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(path => (
+          {Object.entries(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" />
           ))}
         </div>
