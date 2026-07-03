@@ -45,6 +45,7 @@
         </div>
       </section>
 
+      <!-- JUBILEE SECTION -->
       <section class="section-box">
         <h2>Jubilee Collection</h2>
         <div class="gallery">
@@ -54,11 +55,22 @@
         </div>
       </section>
 
+      <!-- CONSTRUCTION SECTION -->
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
           {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}', {eager: true})).map(path => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" />
+          ))}
+        </div>
+      </section>
+
+      <!-- GENERAL GALLERY SECTION -->
+      <section class="section-box">
+        <h2>General Gallery</h2>
+        <div class="gallery">
+          {Object.keys(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg,png}', {eager: true})).map(path => (
+            <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" />
           ))}
         </div>
       </section>
