@@ -3,8 +3,8 @@ const images = import.meta.glob('/public/assets/images/**/*.{jpg,jpeg,png}');
 const imagePaths = Object.keys(images).map(path => path.replace('/public', ''));
 ---
 
-<div class="gallery">
+<div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
   {imagePaths.map((path) => (
-    <img src={path} alt="Gallery Image" style="width: 200px; margin: 10px;" />
+    <img src={`/nsongwa-palace${path}`} alt="Gallery Image" style="width: 100%; height: auto; border-radius: 8px;" />
   ))}
 </div>
