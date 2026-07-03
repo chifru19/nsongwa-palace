@@ -24,6 +24,7 @@
     </header>
 
     <main class="content">
+      <!-- Original Sections -->
       <section class="section-box">
         <h2>Location</h2>
         <p><strong>Nsongwa Palace</strong><br> W426+QW, Bamenda, Cameroon</p>
@@ -31,19 +32,28 @@
       </section>
 
       <section class="section-box">
-        <h2>Nsongwa Ceremony Video</h2>
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
+      <!-- New Video Section -->
+      <section class="section-box">
+        <h2>Nsongwa Ceremony</h2>
         <div class="video-container">
           <video controls>
             <source src="/nsongwa-palace/assets/videos/nsongwa-ceremony.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
         </div>
       </section>
 
+      <!-- Galleries -->
       <section class="section-box">
         <h2>Jubilee Collection</h2>
         <div class="gallery">
-          {Object.entries(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
+          {Object.keys(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png}', {eager: true})).map(path => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" />
           ))}
         </div>
@@ -52,17 +62,8 @@
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
-          {Object.entries(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
+          {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}', {eager: true})).map(path => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" />
-          ))}
-        </div>
-      </section>
-
-      <section class="section-box">
-        <h2>General Gallery</h2>
-        <div class="gallery">
-          {Object.entries(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg,png,JPG,JPEG}', {eager: true})).map(([path, mod]) => (
-            <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" />
           ))}
         </div>
       </section>
