@@ -6,7 +6,7 @@
       body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
       .hero { background: #8b0000; color: white; text-align: center; padding: 3rem 1rem; }
       .hero img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 4px solid white; }
-      .content { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 10px; }
+      .content { max-width: 900px; margin: 2rem auto;padding: 2rem; background: white; border-radius: 10px; }
       .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 1rem; }
       .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
       .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -26,8 +26,7 @@
     <main class="content">
       <section class="section-box">
         <h2>Location</h2>
-        <p><strong>Nsongwa Palace</strong><br>
-        W426+QW, Bamenda, Cameroon</p>
+        <p><strong>Nsongwa Palace</strong><br> W426+QW, Bamenda, Cameroon</p>
         <p><a href="https://www.google.com/maps/search/?api=1&query=W426+QW+Bamenda+Cameroon" target="_blank">View on Google Maps</a></p>
       </section>
 
@@ -46,11 +45,12 @@
         </div>
       </section>
 
+      <!-- Jubilee Section Added Here -->
       <section class="section-box">
-        <h2>Gallery</h2>
+        <h2>Jubilee Collection</h2>
         <div class="gallery">
-          {['1','2','3','4','5','6'].map((num) => (
-            <img src={`/nsongwa-palace/assets/images/gallery-${num}.jpg`} alt={`Gallery ${num}`} />
+          {Object.keys(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png}', {eager: true})).map(path => (
+            <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" />
           ))}
         </div>
       </section>
@@ -58,8 +58,8 @@
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
-          {['1','2','4','5','6','7','8','9'].map((num) => (
-            <img src={`/nsongwa-palace/assets/images/construction-${num}.jpg`} alt={`Construction ${num}`} />
+          {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}', {eager: true})).map(path => (
+            <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" />
           ))}
         </div>
       </section>
@@ -67,22 +67,8 @@
 
     <footer>
       <p><strong>Frank Fru</strong> | Engineer & Son of the Land</p>
-      <p>
-        <a href="https://frankfru.com">Portfolio</a> | 
-        <a href="https://github.com/chifru19">GitHub</a> | 
-        <a href="https://www.linkedin.com/in/frank-fru">LinkedIn</a>
-      </p>
+      <p><a href="https://frankfru.com">Portfolio</a> | <a href="https://github.com/chifru19">GitHub</a> | <a href="https://www.linkedin.com/in/frank-fru">LinkedIn</a></p>
       <p>Contact: <a href="mailto:chifru19@googlemail.com">chifru19@googlemail.com</a></p>
     </footer>
   </body>
 </html>
-
-<!-- Dynamic Gallery Section -->
-<section class="section-box">
-  <h2>Full Image Gallery</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
-    {Object.keys(import.meta.glob('/public/assets/images/**/*.{jpg,jpeg,png}', {eager: true})).map(path => (
-      <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery Image" style="width: 100%; border-radius: 8px;" />
-    ))}
-  </div>
-</section>
