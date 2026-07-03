@@ -1,29 +1,88 @@
 ---
-// Import your components here if needed
 ---
+<html>
+  <head>
+    <style>
+      body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
+      .hero { background: #8b0000; color: white; text-align: center; padding: 3rem 1rem; }
+      .hero img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 4px solid white; }
+      .content { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 10px; }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 1rem; }
+      .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+      .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+      .project-box { border-left-color: #daa520; background: #fff8dc; }
+      .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 1rem; }
+      .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+      footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
+      footer a { color: #daa520; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <img src="/nsongwa-palace/assets/images/hero.jpg" alt="Fon Nsongwa" />
+      <h1>Nsongwa Palace</h1>
+    </header>
 
-<header>
-  <img src="/assets/logo.png" alt="Nsongwa Palace Logo" />
-  </header>
+    <main class="content">
+      <section class="section-box">
+        <h2>Location</h2>
+        <p><strong>Nsongwa Palace</strong><br>
+        W426+QW, Bamenda, Cameroon</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=W426+QW+Bamenda+Cameroon" target="_blank">View on Google Maps</a></p>
+      </section>
 
-<section>
-  <iframe src="YOUR_YOUTUBE_URL"></iframe>
-  <div class="donation-section">...</div>
+      <section class="section-box">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
+          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
+        </ul>
+      </section>
+
+      <section class="section-box">
+        <h2>Cultural Heritage Tour</h2>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/a38l7D9Mx_o" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          {['1','2','3','4','5','6'].map((num) => (
+            <img src={`/nsongwa-palace/assets/images/gallery-${num}.jpg`} alt={`Gallery ${num}`} />
+          ))}
+        </div>
+      </section>
+
+      <section class="section-box project-box">
+        <h2>Construction Progress</h2>
+        <div class="gallery">
+          {['1','2','4','5','6','7','8','9'].map((num) => (
+            <img src={`/nsongwa-palace/assets/images/construction-${num}.jpg`} alt={`Construction ${num}`} />
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>Frank Fru</strong> | Engineer & Son of the Land</p>
+      <p>
+        <a href="https://frankfru.com">Portfolio</a> | 
+        <a href="https://github.com/chifru19">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/frank-fru">LinkedIn</a>
+      </p>
+      <p>Contact: <a href="mailto:chifru19@googlemail.com">chifru19@googlemail.com</a></p>
+    </footer>
+  </body>
+</html>
+
+<!-- Dynamic Gallery Section -->
+<section class="section-box">
+  <h2>Full Image Gallery</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+    {Object.keys(import.meta.glob('/public/assets/images/**/*.{jpg,jpeg,png}', {eager: true})).map(path => (
+      <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery Image" style="width: 100%; border-radius: 8px;" />
+    ))}
+  </div>
 </section>
-
-<div class="gallery-container" style="padding: 20px;"> 
-  <hr />
-  <h3>Jubilee Collection</h3>
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
-    {Object.keys(import.meta.glob('/public/assets/images/jubilee/*.{jpg,jpeg,png}', {eager: true})).map(path => (
-      <img src={path.replace('/public', '/nsongwa-palace')} alt="Jubilee" style="width: 100%; border-radius: 8px;" />
-    ))}
-  </div>
-
-  <h3>Construction Progress</h3>
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
-    {Object.keys(import.meta.glob('/public/assets/images/construction/*.{jpg,jpeg,png}', {eager: true})).map(path => (
-      <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" style="width: 100%; border-radius: 8px;" />
-    ))}
-  </div>
-</div>
