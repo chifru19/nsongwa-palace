@@ -11,8 +11,8 @@
       .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
       .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
       .project-box { border-left-color: #daa520; background: #fff8dc; }
-      .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 1rem; }
-      .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+      .video-container { margin-top: 1rem; }
+      .video-container video { width: 100%; border-radius: 8px; }
       footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
       footer a { color: #daa520; text-decoration: none; }
     </style>
@@ -31,21 +31,15 @@
       </section>
 
       <section class="section-box">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li><strong>Traditional Council Meeting</strong> - June 20, 2026</li>
-          <li><strong>Nsongwa Cultural Festival</strong> - August 15, 2026</li>
-        </ul>
-      </section>
-
-      <section class="section-box">
-        <h2>Cultural Heritage Tour</h2>
+        <h2>Nsongwa Ceremony</h2>
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/a38l7D9Mx_o" allowfullscreen></iframe>
+          <video controls width="100%">
+            <source src="/nsongwa-palace/assets/videos/nsongwa-ceremony.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
-      <!-- JUBILEE SECTION -->
       <section class="section-box">
         <h2>Jubilee Collection</h2>
         <div class="gallery">
@@ -55,7 +49,6 @@
         </div>
       </section>
 
-      <!-- CONSTRUCTION SECTION -->
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
@@ -65,7 +58,6 @@
         </div>
       </section>
 
-      <!-- GENERAL GALLERY SECTION -->
       <section class="section-box">
         <h2>General Gallery</h2>
         <div class="gallery">
