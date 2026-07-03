@@ -12,8 +12,8 @@
       .section-box { background: #fff; padding: 1.5rem; border-left: 5px solid #8b0000; margin: 2rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
       .project-box { border-left-color: #daa520; background: #fff8dc; }
       .donation-box { border-left-color: #28a745; background: #e8f5e9; text-align: center; }
-      .video-container { margin-top: 1rem; }
-      .video-container video { width: 100%; border-radius: 8px; }
+      .video-container { margin-top: 1rem; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+      .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
       footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
       footer a { color: #daa520; text-decoration: none; }
     </style>
@@ -22,6 +22,7 @@
     <header class="hero">
       <img src="/nsongwa-palace/assets/images/hero.jpg" alt="Fon Nsongwa" />
       <h1>Nsongwa Palace</h1>
+      <p>Welcome to the official website of the Nsongwa Palace, preserving our history and culture.</p>
     </header>
 
     <main class="content">
@@ -46,9 +47,16 @@
       </section>
 
       <section class="section-box">
+        <h2>Cultural Heritage Tour</h2>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/a38l7D9Mx_o" allowfullscreen></iframe>
+        </div>
+      </section>
+      
+      <section class="section-box">
         <h2>Nsongwa Ceremony</h2>
         <div class="video-container">
-          <video controls width="100%">
+          <video controls>
             <source src="/nsongwa-palace/assets/videos/nsongwa-ceremony.mp4" type="video/mp4">
           </video>
         </div>
@@ -68,6 +76,15 @@
         <div class="gallery">
           {Object.keys(import.meta.glob('/public/assets/images/construction-*.jpg', {eager: true})).map(path => (
             <img src={path.replace('/public', '/nsongwa-palace')} alt="Construction" />
+          ))}
+        </div>
+      </section>
+
+      <section class="section-box">
+        <h2>General Gallery</h2>
+        <div class="gallery">
+          {Object.keys(import.meta.glob('/public/assets/images/gallery-*.{jpg,jpeg}', {eager: true})).map(path => (
+            <img src={path.replace('/public', '/nsongwa-palace')} alt="Gallery" />
           ))}
         </div>
       </section>
