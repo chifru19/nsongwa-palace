@@ -157,8 +157,8 @@
       <section class="section-box">
         <h2>Jubilee Collection</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('../../public/assets/images/jubilee/*.jpg', {eager: true})).map(path => (
-            <img src={path.replace('../public', '/nsongwa-palace')} alt="Jubilee" />
+          {Object.values(import.meta.glob('../assets/images/jubilee/*.jpg', { eager: true, query: '?url', import: 'default' })).map(url => (
+            <img src={url as string} alt=\"Jubilee\" />
           ))}
         </div>
       </section>
@@ -166,8 +166,8 @@
       <section class="section-box project-box">
         <h2>Construction Progress</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('../../public/assets/images/construction-*.jpg', {eager: true})).map(path => (
-            <img src={path.replace('../public', '/nsongwa-palace')} alt="Construction" />
+          {Object.values(import.meta.glob('../assets/images/construction-*.jpg', { eager: true, query: '?url', import: 'default' })).map(url => (
+            <img src={url as string} alt=\"Construction\" />
           ))}
         </div>
       </section>
@@ -175,8 +175,8 @@
       <section class="section-box">
         <h2>General Gallery</h2>
         <div class="gallery">
-          {Object.keys(import.meta.glob('../../public/assets/images/gallery-*.{jpg,jpeg}', {eager: true})).map(path => (
-            <img src={path.replace('../public', '/nsongwa-palace')} alt="Gallery" />
+          {Object.values(import.meta.glob('../assets/images/gallery-*.{jpg,jpeg}', { eager: true, query: '?url', import: 'default' })).map(url => (
+            <img src={url as string} alt=\"Gallery\" />
           ))}
         </div>
       </section>
